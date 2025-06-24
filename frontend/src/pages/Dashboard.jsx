@@ -310,7 +310,7 @@ export default function Dashboard() {
         <Typography variant="h5" fontWeight={700} mb={2}>Tips & Advice</Typography>
         <Card>
           <CardContent>
-            <Box display="flex" alignItems="center" gap={2} color="text.secondary" justifyContent="center" py={4}>
+            <Box display="flex" alignItems="flex-start" gap={2} color="text.secondary" justifyContent="center" py={4} >
               <LightbulbOutlinedIcon fontSize="large" />
               <Box textAlign="center">
                 <Typography mb={1}>
