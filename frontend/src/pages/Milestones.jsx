@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { Box, Typography, Button, List, ListItem, ListItemText, IconButton, Dialog, DialogTitle, DialogContent, DialogActions, TextField, Alert, Card, CardContent, CardActions, Divider } from '@mui/material';
-import { Add, Edit, Delete } from '@mui/icons-material';
+import { Add, Edit, Delete, Dashboard } from '@mui/icons-material';
 import { LightbulbOutlined as TipsIcon } from "@mui/icons-material";
 
 
@@ -82,7 +82,7 @@ export default function Milestones() {
   };
 
   return (
-    <Box maxWidth={700} mx="auto" mt={4}>
+    <Box maxWidth={700}  mx="auto" mt={4}>
       <Typography variant="h4" mb={2}>Your Milestones</Typography>
       {user && (
         <Typography variant="h6" color="secondary" mb={2}>
@@ -90,6 +90,16 @@ export default function Milestones() {
         </Typography>
       )}
       {error && <Alert severity="error">{error}</Alert>}
+      <Button
+        variant="outlined"
+        color="primary"
+        startIcon={<Dashboard />}
+        onClick={() => navigate('/dashboard')}
+        sx={{ mb: 2, mr: 2 }}
+        aria-label="Go to Dashboard"
+      >
+        Dashboard
+      </Button>
       <Button variant="contained" color="primary" startIcon={<Add />} onClick={() => handleOpen()} sx={{ mb: 2 }} aria-label="Add New Milestone">
         Add New Milestone
       </Button>
